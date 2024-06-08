@@ -16,3 +16,20 @@
     </ul>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Product</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+</head>
+<body>
+    <h1>Create Product</h1>
+    <form action="#" th:action="@{/products}" th:object="${product}" method="post">
+        <input type="text" th:field="*{name}" placeholder="Name"/>
+        <input type="text" th:field="*{description}" placeholder="Description"/>
+        <input type="number" th:field="*{price}" placeholder="Price"/>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
